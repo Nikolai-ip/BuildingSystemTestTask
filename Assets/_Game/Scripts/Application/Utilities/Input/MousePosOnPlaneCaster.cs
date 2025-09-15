@@ -19,7 +19,7 @@ namespace _Game.Scripts.Application.Utilities.Input
             _planeLayerMask = planeLayerMask;
         }
 
-        public Vector3 GetMousePositionOnPlane()
+        public Vector3 GetMousePos()
         {
             Vector3 mousePos = _inputService.MousePosition;
             mousePos.z = _camera.nearClipPlane;

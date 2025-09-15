@@ -20,4 +20,5 @@ namespace _Game.Scripts.Domain.Entities.Building
             BuildingType = buildingType;
         }
     }
+    
 }

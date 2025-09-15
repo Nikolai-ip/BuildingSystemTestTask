@@ -1,10 +1,9 @@
-using _Game.Scripts.Application.Utilities.Input;
 using _Game.Scripts.Infrastructure.DI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Application.Installers
+namespace _Game.Scripts.Application.Utilities.Input.Installers
 {
     public class MouseCasterInstaller: IInstallerMono
     {
@@ -34,7 +33,7 @@ namespace _Game.Scripts.Application.Installers
 
         public void Tick()
         {
-            Debug.Log(_mousePosOnPlaneCaster.GetMousePositionOnPlane());
+            Debug.Log(_mousePosOnPlaneCaster.GetMousePos());
         }
     }
     
