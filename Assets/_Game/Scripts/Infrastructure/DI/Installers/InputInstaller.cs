@@ -1,12 +1,11 @@
 using _Game.Scripts.Infrastructure.Input;
 using VContainer;
-using VContainer.Unity;
 
-namespace _Game.Scripts.Infrastructure.DI.Installers.Input
+namespace _Game.Scripts.Infrastructure.DI.Installers
 {
-    public class InputInstaller: LifetimeScope
+    public class InputInstaller: IInstallerMono
     {
-        protected override void Configure(IContainerBuilder builder)
+        public override void Install(IContainerBuilder builder)
         {
             builder
                 .Register<InputService>(Lifetime.Singleton)
