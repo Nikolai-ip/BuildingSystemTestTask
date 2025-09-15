@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using VContainer.Unity;
 
 namespace _Game.Scripts.Infrastructure.Input
@@ -17,5 +18,6 @@ namespace _Game.Scripts.Infrastructure.Input
                 OnLeftMouseButtonClicked?.Invoke();
             }
         }
+        public bool IsPointerOverUI() => EventSystem.current.IsPointerOverGameObject();
     }
 }

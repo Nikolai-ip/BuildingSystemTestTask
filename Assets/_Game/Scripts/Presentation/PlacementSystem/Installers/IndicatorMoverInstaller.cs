@@ -1,4 +1,4 @@
-using _Game.Scripts.Infrastructure.DI;
+using _Game.Scripts.DI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;

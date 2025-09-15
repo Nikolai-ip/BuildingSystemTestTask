@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using VContainer.Unity;
 
 namespace _Game.Scripts.Infrastructure.StateMachine
 {
-    public class StateMachineBase
+    public class StateMachineBase: IInitializable
     {
         private Dictionary<Type, IExitableState> _states;
         protected IExitableState _currentState;
@@ -40,14 +41,6 @@ namespace _Game.Scripts.Infrastructure.StateMachine
         {
             return _states[typeof(TState)] as TState;
         }
-
-        protected void CastState<T>(out T @ref)
-        {
-            @ref = default;
-            if (_currentState is T state)
-                @ref = state;
-        }
-
-
+        
     }
 }

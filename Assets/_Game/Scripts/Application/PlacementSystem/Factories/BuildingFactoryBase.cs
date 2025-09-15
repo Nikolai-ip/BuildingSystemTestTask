@@ -1,16 +1,19 @@
 using System.Collections.Generic;
+using _Game.Scripts.Application.PlacementSystem.Building;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure;
+using VContainer;
 
 namespace _Game.Scripts.Application.PlacementSystem.Factories
 {
     public abstract class BuildingFactoryBase : IFactory<BuildingDataComponent, BuildingParams>
     {
         private Dictionary<BuildingType, BuildingDataComponent> _buildingPrefabsDataBase;
-
-        public BuildingFactoryBase(Dictionary<BuildingType, BuildingDataComponent> buildingPrefabsDataBase)
+        protected readonly IObjectResolver _resolver;
+        public BuildingFactoryBase(Dictionary<BuildingType, BuildingDataComponent> buildingPrefabsDataBase, IObjectResolver resolver)
         {
             _buildingPrefabsDataBase = buildingPrefabsDataBase;
+            _resolver = resolver;
         }
 
         public BuildingDataComponent Create(BuildingParams @params)

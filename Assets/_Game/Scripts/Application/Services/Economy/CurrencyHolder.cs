@@ -1,21 +1,20 @@
 using System;
+using UniRx;
 
 namespace _Game.Scripts.Application.Services.Economy
 {
     public class CurrencyHolder
     {
-        private readonly Currency _currency;
-        public event Action<Currency> CurrencyChanged;
-
+        public ReactiveProperty<Currency> CurrencyProperty { get; }
+        
         public CurrencyHolder(Currency currency)
         {
-            _currency = currency;
+            CurrencyProperty = new ReactiveProperty<Currency>(currency);
         }
 
         public void AddCoins(int coinsAmount)
         {
-            _currency.Coins += coinsAmount;
-            CurrencyChanged?.Invoke(_currency);
+            CurrencyProperty.Value += new Currency(){Coins = coinsAmount};
         }
     }
 }

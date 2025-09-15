@@ -1,4 +1,4 @@
-using _Game.Scripts.Infrastructure.DI;
+using _Game.Scripts.DI;
 using VContainer;
 
 namespace _Game.Scripts.Application.PlacementSystem
@@ -7,7 +7,7 @@ namespace _Game.Scripts.Application.PlacementSystem
     {
         public override void Install(IContainerBuilder builder)
         {
-            builder.Register<PlanePointerPosition>(Lifetime.Singleton);
+            builder.Register<GridPointerPosition>(Lifetime.Singleton);
         }
     }
 }

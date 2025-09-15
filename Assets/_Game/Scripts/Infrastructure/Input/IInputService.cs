@@ -7,5 +7,6 @@ namespace _Game.Scripts.Infrastructure.Input
     {
         public Vector3 MousePosition { get; }
         event Action OnLeftMouseButtonClicked;
+        bool IsPointerOverUI();
     }
 }

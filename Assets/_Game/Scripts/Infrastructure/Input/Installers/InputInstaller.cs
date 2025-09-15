@@ -1,4 +1,4 @@
-using _Game.Scripts.Infrastructure.DI;
+using _Game.Scripts.DI;
 using VContainer;
 
 namespace _Game.Scripts.Infrastructure.Input.Installers

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d128880cd2442c9b844e041857c716, type: 3}
   m_Name: BuildingDataBase
   m_EditorClassIdentifier: Assembly-CSharp::_Game.Scripts.StaticData.BuildingDataBase_SO
-  <Buildings>k__BackingField:
+  <BuildingsInspector>k__BackingField:
     _dictionary:
     - _key: 1
       _value: {fileID: 5246081098636360468, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
