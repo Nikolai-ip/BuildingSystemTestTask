@@ -2,7 +2,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Infrastructure.DI.Installers
+namespace _Game.Scripts.Infrastructure.DI
 {
     public abstract class IInstallerMono: MonoBehaviour, IInstaller
     {

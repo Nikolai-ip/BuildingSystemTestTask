@@ -1,5 +1,5 @@
 using _Game.Scripts.Application.Utilities.Input;
-using _Game.Scripts.Infrastructure.DI.Installers;
+using _Game.Scripts.Infrastructure.DI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;

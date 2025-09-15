@@ -3,7 +3,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Infrastructure.DI.Installers
+namespace _Game.Scripts.Infrastructure.DI
 {
     public class Context: LifetimeScope
     {

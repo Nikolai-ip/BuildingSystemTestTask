@@ -1,7 +1,7 @@
-using _Game.Scripts.Infrastructure.Input;
+using _Game.Scripts.Infrastructure.DI;
 using VContainer;
 
-namespace _Game.Scripts.Infrastructure.DI.Installers
+namespace _Game.Scripts.Infrastructure.Input.Installers
 {
     public class InputInstaller: IInstallerMono
     {
