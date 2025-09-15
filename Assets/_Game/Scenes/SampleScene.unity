@@ -861,6 +861,7 @@ MonoBehaviour:
   - {fileID: 582750465}
   - {fileID: 1849835394}
   - {fileID: 9189442}
+  _contextType: 1
 --- !u!4 &622354918
 Transform:
   m_ObjectHideFlags: 0
@@ -2013,9 +2014,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1410809449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78eebdcf97724dc492a97014501c2dc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eeb99f6b8f34b358440a41d53878a64, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.PlacementSystemInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::_Game.Scripts.Application.PlacementSystem.PlacementSystemInstaller
+  _buildingDataBase: {fileID: 11400000, guid: 389ab15361149c44c961898efd2d32e3, type: 2}
 --- !u!1 &1604531229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,70 +2139,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1039250204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1988149794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1988149795}
-  - component: {fileID: 1988149796}
-  - component: {fileID: 1988149797}
-  m_Layer: 0
-  m_Name: BuildingInstaller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1988149795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988149794}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7767166234068688324}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1988149796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988149794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffcfc0a65b84481f9058632db069c6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Infrastructure::_Game.Scripts.Infrastructure.DI.Context
-  parentReference:
-    TypeName: 
-  autoRun: 1
-  autoInjectGameObjects: []
-  _installers:
-  - {fileID: 1988149797}
---- !u!114 &1988149797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988149794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad0b965af5042b99a4eaeb453a718b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.Building.BuildingInstaller
-  _buildingDataComponent: {fileID: 7767166234068688323}
 --- !u!1 &2030471659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,82 +2504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971e9e6e172b478ea68385227eb99c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Game.Scripts.Presentation.PlacementSystem.BuyBuildingButton
---- !u!1001 &7767166234068688321
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2321118930980346161, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      propertyPath: m_Name
-      value: House
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1988149795}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
---- !u!114 &7767166234068688323 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5246081098636360468, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-  m_PrefabInstance: {fileID: 7767166234068688321}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99f18c6eec54fff8bc7fe8037274a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.BuildingDataComponent
---- !u!4 &7767166234068688324 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 996893263671117258, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
-  m_PrefabInstance: {fileID: 7767166234068688321}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2653,6 +2515,5 @@ SceneRoots:
   - {fileID: 867759868}
   - {fileID: 1604531230}
   - {fileID: 851059756}
-  - {fileID: 7767166234068688321}
   - {fileID: 2146476629}
   - {fileID: 508561813}

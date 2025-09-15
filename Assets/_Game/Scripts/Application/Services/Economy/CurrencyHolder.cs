@@ -16,5 +16,10 @@ namespace _Game.Scripts.Application.Services.Economy
         {
             CurrencyProperty.Value += new Currency(){Coins = coinsAmount};
         }
+
+        public void SubCoins(int coinsAmount)
+        {
+            AddCoins(-coinsAmount);
+        }
     }
 }

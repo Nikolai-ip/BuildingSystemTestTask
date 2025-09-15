@@ -271,3 +271,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Game.Scripts.Presentation.PlacementSystem.BuyBuildingButton
   _buildingType: 0
+  _clickInterval: 0.3

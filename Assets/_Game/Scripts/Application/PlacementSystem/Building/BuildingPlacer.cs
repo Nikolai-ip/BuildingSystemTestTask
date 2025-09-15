@@ -9,18 +9,18 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
     public class BuildingPlacer: IDisposable
     {
         private Transform _buildingTr;
-        private BuildingDataComponent _buildingData;
         private GridPointerPosition _pointerPosition;
         private readonly IInputService _inputService;
         private CancellationTokenSource _cts;
-        public event Action OnBuildingPlaced;
-
-        public BuildingPlacer(Transform buildingTr, BuildingDataComponent buildingData, GridPointerPosition pointerPosition, IInputService inputService)
+        public event Action<Vector2Int> OnBuildingPlaced;
+        public Vector2Int BuildingPos { get; private set; }
+        private Vector3 _offset;
+        public BuildingPlacer(Transform buildingTr, GridPointerPosition pointerPosition, IInputService inputService, Vector3 offset)
         {
             _buildingTr = buildingTr;
-            _buildingData = buildingData;
             _pointerPosition = pointerPosition;
             _inputService = inputService;
+            _offset = offset;
         }
 
         public void StartPlace()
@@ -34,8 +34,11 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         {
             try
             {
-                while(!_cts.Token.IsCancellationRequested)
+                while(_cts != null && !_cts.Token.IsCancellationRequested)
                 {
+                    Vector3 position = _pointerPosition.GetPosition();
+                    position.y = 0;
+                    _buildingTr.position = position;
                     await UniTask.Yield();
                 }
             }
@@ -47,7 +50,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         {
             _inputService.OnLeftMouseButtonClicked -= StopPlace;
             DisposeCts();
-            OnBuildingPlaced?.Invoke();
+            OnBuildingPlaced?.Invoke(BuildingPos);
         }
 
         public void Dispose()
@@ -57,8 +60,8 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
 
         private void DisposeCts()
         {
-            _cts.Cancel();
-            _cts.Dispose();
+            _cts?.Cancel();
+            _cts?.Dispose();
             _cts = null;
         }
     }

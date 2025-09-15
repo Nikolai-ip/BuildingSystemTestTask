@@ -122,6 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 996893263671117258}
   - component: {fileID: 5246081098636360468}
+  - component: {fileID: 4308866426590819417}
+  - component: {fileID: 3115295610197267619}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -159,6 +161,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.BuildingDataComponent
   _size: {x: 3, y: 1}
   _type: 1
+--- !u!114 &4308866426590819417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321118930980346161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcfc0a65b84481f9058632db069c6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Infrastructure::_Game.Scripts.Infrastructure.DI.Context
+  parentReference:
+    TypeName: 
+  autoRun: 0
+  autoInjectGameObjects: []
+  _installers:
+  - {fileID: 3115295610197267619}
+  _contextType: 2
+--- !u!114 &3115295610197267619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321118930980346161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad0b965af5042b99a4eaeb453a718b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.Building.BuildingInstaller
+  _buildingMoveOffset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &3356988916724736592
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 3356988916724736592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

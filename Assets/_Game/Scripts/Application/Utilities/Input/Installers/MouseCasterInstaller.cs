@@ -17,25 +17,8 @@ namespace _Game.Scripts.Application.Utilities.Input.Installers
                 .WithParameter<LayerMask>(_planeLayerMask)
                 .WithParameter<float>(_maxDistance)
                 .AsSelf();
-
-            builder.Register<Test>(Lifetime.Singleton).AsImplementedInterfaces();
         }
         
-    }
-
-    class Test: ITickable
-    {
-        MousePosOnPlaneCaster _mousePosOnPlaneCaster;
-
-        public Test(MousePosOnPlaneCaster mousePosOnPlaneCaster)
-        {
-            _mousePosOnPlaneCaster = mousePosOnPlaneCaster;
-        }
-
-        public void Tick()
-        {
-            Debug.Log(_mousePosOnPlaneCaster.GetMousePos());
-        }
     }
     
 }

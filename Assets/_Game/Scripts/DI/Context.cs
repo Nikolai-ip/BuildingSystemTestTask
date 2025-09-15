@@ -9,7 +9,7 @@ namespace _Game.Scripts.DI
     public class Context: LifetimeScope
     {
         [SerializeField] private List<IInstallerMono> _installers;
-        private ContextType _contextType;
+        [SerializeField] private ContextType _contextType;
         public ContextType ContextType => _contextType;
         protected override void Configure(IContainerBuilder builder)
         {
@@ -17,6 +17,11 @@ namespace _Game.Scripts.DI
             {
                 installer.Install(builder);
             }
+        }
+
+        protected override LifetimeScope FindParent()
+        {
+            return FindParentContext();
         }
 
         private LifetimeScope FindParentContext()

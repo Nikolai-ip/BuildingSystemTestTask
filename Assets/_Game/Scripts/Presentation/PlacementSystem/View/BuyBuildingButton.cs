@@ -1,5 +1,6 @@
 using System;
 using _Game.Scripts.Domain.Entities.Building;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,26 +12,26 @@ namespace _Game.Scripts.Presentation.PlacementSystem.View
         [SerializeField] private BuildingType _buildingType;
         public BuildingType BuildingType => _buildingType;
         private Button _button;
+        [SerializeField] private float _clickInterval;
 
         private void OnEnable()
         {
-            _button ??= GetComponent<Button>();
-            _button.onClick.AddListener(OnClick);
+            if (!_button) Init();
         }
 
-        private void OnDisable()
+        private void Init()
         {
-            _button.onClick.RemoveListener(OnClick);
-        }
-
-        private void OnClick()
-        {
-            callback?.Invoke(new BuildingPurchasedCallback(_buildingType));
+            _button = GetComponent<Button>();
+              _button.OnClickAsObservable().Throttle(TimeSpan.FromSeconds(_clickInterval))
+                  .Subscribe((unit)=>
+            {
+                callback?.Invoke(new BuildingPurchasedCallback(_buildingType));
+            }).AddTo(this);  
         }
 
         public void SetData(ButtonViewData data)
         {
-            _button ??= GetComponent<Button>();
+            if (!_button) Init();
             _button.interactable = data.Interactable;
         }
     }

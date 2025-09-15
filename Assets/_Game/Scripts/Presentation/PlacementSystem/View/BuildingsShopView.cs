@@ -15,12 +15,6 @@ namespace _Game.Scripts.Presentation.PlacementSystem.View
             _buyBuildingButtons = buyBuildingButtons;
             _buyBuildingButtons.ForEach(button => button.callback += OnBuildingBuyButtonClicked);
         }
-        private void OnEnable()
-        {
-            if (_buyBuildingButtons != null)
-                _buyBuildingButtons.ForEach(button => button.callback += OnBuildingBuyButtonClicked);
-        }
-
         private void OnDisable() => _buyBuildingButtons.ForEach(button=>button.callback -= OnBuildingBuyButtonClicked);
 
         private void OnBuildingBuyButtonClicked(BuildingPurchasedCallback callbackData)
