@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
 using _Game.Scripts.Application.Utilities;
 using _Game.Scripts.Domain.Entities.Building;
-using Cysharp.Threading.Tasks;
 
 namespace _Game.Scripts.Application.Services.Economy
 {
