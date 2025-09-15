@@ -1,10 +1,11 @@
 using System;
 using _Game.Scripts.Application.Utilities;
 using _Game.Scripts.Domain.Entities.Building;
+using VContainer.Unity;
 
 namespace _Game.Scripts.Application.Services.Economy
 {
-    public class BuildingEconomyService
+    public class BuildingEconomyService: IStartable
     {
         private readonly IBuildingContainer _buildingContainer;
         private readonly IncomeBuildingsParams _incomeBuildingsParams;
@@ -19,8 +20,8 @@ namespace _Game.Scripts.Application.Services.Economy
             _currencyHolder = currencyHolder;
             _stopwatch = new Stopwatch(_interval);
         }
-        
-        private void Start()
+
+        public void Start()
         {
             _stopwatch.OnTick += CalculateIncome;
             _stopwatch.Start();
