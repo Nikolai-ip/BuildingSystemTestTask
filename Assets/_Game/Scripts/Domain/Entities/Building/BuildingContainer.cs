@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace _Game.Scripts.Domain.Entities.Building
 {
@@ -26,6 +27,7 @@ namespace _Game.Scripts.Domain.Entities.Building
                 return false;
             
             _buildings.Add(buildingParams);
+            Debug.Log($"[BuildingContainer.TryAddBuilding] Success add building {buildingParams.BuildingType}");
             return true;
         }
 
@@ -36,6 +38,7 @@ namespace _Game.Scripts.Domain.Entities.Building
                 return false;
             
             _buildings.Remove(existingBuilding);
+            Debug.Log($"[BuildingContainer.TryAddBuilding] Success remove building {existingBuilding.BuildingType}");
             return true;
         }
 

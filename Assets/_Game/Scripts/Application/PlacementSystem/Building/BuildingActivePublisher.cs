@@ -36,6 +36,9 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
                 case BuildingState.Edit:
                     _buildingRemovedPublisher.Publish(new BuildingRemovedMessage(_dataComponent.BuildingParams));
                     break;
+                case BuildingState.Remove:
+                    _buildingRemovedPublisher.Publish(new BuildingRemovedMessage(_dataComponent.BuildingParams));
+                    break;
             }
             
         }

@@ -4,6 +4,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
     {
         None,
         Idle,
-        Edit
+        Edit,
+        Remove
     }
 }

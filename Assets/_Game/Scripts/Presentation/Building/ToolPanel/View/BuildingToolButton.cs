@@ -1,0 +1,30 @@
+using UnityEngine;
+
+namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
+{
+    public class BuildingToolButton: ButtonView<BuildingToolCallback>
+    {
+        [SerializeField] private BuildingToolCallback.ToolAction  _toolAction;
+        protected override BuildingToolCallback GetInvokeParams()
+        {
+            return new BuildingToolCallback(_toolAction);
+        }
+    }
+
+    public struct BuildingToolCallback
+    {
+        public enum ToolAction
+        {
+            None,
+            Edit,
+            Remove
+        }
+
+        public ToolAction Action { get; }
+
+        public BuildingToolCallback(ToolAction action)
+        {
+            Action = action;
+        }
+    }
+}
