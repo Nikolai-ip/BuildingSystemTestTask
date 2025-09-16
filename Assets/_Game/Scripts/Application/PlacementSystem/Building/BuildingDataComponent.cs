@@ -25,8 +25,10 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         }
         public void Init(BuildingParams @params, BuildingState state)
         {
-            _buildingParams = new(@params.Id, Vector3Int.zero, @params.Level, _size, _type);
+            _buildingParams = new BuildingParams(@params.Id, @params.Position, @params.Level, _size, _type);
             _buildingFsm.State.Subscribe(OnStateChanged).AddTo(this);
+            if (state == BuildingState.Idle) 
+                _buildingPlacer.PlaceObject();
             _buildingFsm.SetState(state);
         }
         

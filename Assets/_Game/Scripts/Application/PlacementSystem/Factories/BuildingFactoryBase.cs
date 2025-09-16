@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using _Game.Scripts.Application.PlacementSystem.Building;
+using _Game.Scripts.Domain.Entities;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure;
-using _Game.Scripts.Infrastructure.Input;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 

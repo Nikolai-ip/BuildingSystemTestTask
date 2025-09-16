@@ -47,6 +47,14 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             MoveBuilding().Forget();
         }
 
+        public void PlaceObject()
+        {
+            var buildingParams = _buildingDataComponent.BuildingParams;
+            BuildingPos = buildingParams.Position;
+            _gridObjectAdder.AddObjectAt(BuildingPos, buildingParams.Size, buildingParams.Id);
+            _buildingTr.position  = _pointerPosition.CellToWorld(BuildingPos) + _offset;
+        }
+
         private async UniTask MoveBuilding()
         {
             try

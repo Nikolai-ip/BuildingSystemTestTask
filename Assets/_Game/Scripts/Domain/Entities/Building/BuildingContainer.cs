@@ -9,16 +9,7 @@ namespace _Game.Scripts.Domain.Entities.Building
     public class BuildingContainer: IBuildingContainer
     {
         private readonly List<BuildingParams> _buildings = new();
-        
-        public IEnumerator<BuildingParams> GetEnumerator()
-        {
-            return _buildings.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        public event Action<List<BuildingParams>> OnContainerChanged;
 
         public bool TryAddBuilding(BuildingParams buildingParams)
         {
@@ -28,6 +19,7 @@ namespace _Game.Scripts.Domain.Entities.Building
             
             _buildings.Add(buildingParams);
             Debug.Log($"[BuildingContainer.TryAddBuilding] Success add building {buildingParams.BuildingType}");
+            OnContainerChanged?.Invoke(_buildings);
             return true;
         }
 
@@ -39,11 +31,13 @@ namespace _Game.Scripts.Domain.Entities.Building
             
             _buildings.Remove(existingBuilding);
             Debug.Log($"[BuildingContainer.TryAddBuilding] Success remove building {existingBuilding.BuildingType}");
+            OnContainerChanged?.Invoke(_buildings);
             return true;
         }
 
         public int Count => _buildings.Count;
 
         public BuildingParams this[int i] => _buildings[i];
+
     }
 }

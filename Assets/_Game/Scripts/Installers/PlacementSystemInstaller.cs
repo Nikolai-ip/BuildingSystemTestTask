@@ -23,10 +23,12 @@ namespace _Game.Scripts.Installers
             builder.RegisterInstance(_buildingDataBase.GetDataBase());
             
             builder.Register<BuildingFactoryBase>(Lifetime.Scoped)
-                .As<IFactory<BuildingDataComponent, BuildingParams>>().WithParameter(BuildingState.Edit);
+                .As<IFactory<BuildingDataComponent, BuildingParams>>().WithParameter(BuildingState.Edit).Keyed(BuildingFactoryKey.Runtime);
+            builder.Register<BuildingFactoryBase>(Lifetime.Scoped)
+                .As<IFactory<BuildingDataComponent, BuildingParams>>().WithParameter(BuildingState.Idle).Keyed(BuildingFactoryKey.Restore);
 
             builder.Register<BuildingContainer>(Lifetime.Singleton).As<IBuildingContainer>();
-            builder.Register<BuildingSpawner>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<BuildingRuntimeSpawner>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.Register<BuildingContainerEditor>(Lifetime.Singleton).AsImplementedInterfaces();
             
         }

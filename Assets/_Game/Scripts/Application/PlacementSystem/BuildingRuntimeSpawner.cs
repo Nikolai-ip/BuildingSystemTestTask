@@ -1,16 +1,18 @@
 using System;
 using _Game.Scripts.Application.PlacementSystem.Building;
+using _Game.Scripts.Application.PlacementSystem.Factories;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure;
 using UnityEngine;
+using VContainer;
 
 namespace _Game.Scripts.Application.PlacementSystem
 {
-    public class BuildingSpawner: IBuildingSpawner
+    public class BuildingRuntimeSpawner: IBuildingSpawner
     {
         private IFactory<BuildingDataComponent, BuildingParams> _factory;
 
-        public BuildingSpawner(IFactory<BuildingDataComponent, BuildingParams> factory)
+        public BuildingRuntimeSpawner([Key(BuildingFactoryKey.Runtime)] IFactory<BuildingDataComponent, BuildingParams> factory)
         {
             _factory = factory;
         }

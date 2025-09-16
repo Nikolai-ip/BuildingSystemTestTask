@@ -19,5 +19,7 @@ namespace _Game.Scripts.Application.PlacementSystem
             return _gridVectorConverter.ConvertWorldToCellInWorld(_mousePosOnPlaneCaster.GetMousePos());
         }   
         public Vector3Int PointerPosToCell() => _gridVectorConverter.ConvertToCell(_mousePosOnPlaneCaster.GetMousePos());
+
+        public Vector3 CellToWorld(Vector3Int cellPos) => _gridVectorConverter.CellToWorld(cellPos);
     }
 }

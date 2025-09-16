@@ -10,5 +10,6 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         Vector3Int BuildingPos { get; }
         ReactiveProperty<bool> CanBePlaced { get; }
         void StartPlace();
+        void PlaceObject();
     }
 }
