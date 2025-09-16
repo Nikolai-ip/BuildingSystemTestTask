@@ -10,16 +10,16 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         private BuildingState _currentState;
         public ReactiveProperty<BuildingState> State { get; private set; }
 
-        private readonly BuildingPlacer _buildingPlacer;
+        private readonly IBuildingPlacer _buildingPlacer;
         private IDisposable _subscriber;
 
-        public BuildingFSM(BuildingPlacer buildingPlacer)
+        public BuildingFSM(IBuildingPlacer buildingPlacer)
         {
             State = new ReactiveProperty<BuildingState>(BuildingState.None);
             _buildingPlacer = buildingPlacer;
         }
 
-        public void Enable(BuildingState state) => State.Value = state;
+        public void SetState(BuildingState state) => State.Value = state;
 
         private void HandleStateTransition(BuildingState state)
         {
@@ -35,7 +35,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             _subscriber = State.Subscribe(HandleStateTransition);
         }
 
-        private void SwitchToIdleState(Vector2Int pos) => State.Value = BuildingState.Idle;
+        private void SwitchToIdleState(Vector3Int pos) => State.Value = BuildingState.Idle;
 
         public void Dispose()
         {

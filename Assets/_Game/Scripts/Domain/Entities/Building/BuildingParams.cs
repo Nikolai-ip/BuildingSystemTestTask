@@ -6,12 +6,12 @@ namespace _Game.Scripts.Domain.Entities.Building
     public class BuildingParams
     {
         public Guid Id { get; set; }
-        public Vector2Int Position { get; set; }
+        public Vector3Int Position { get; set; }
         public int Level { get; set; }
-        public Vector2Int Size { get; set; }
+        public Vector3Int Size { get; set; }
         public BuildingType BuildingType { get; set; }
 
-        public BuildingParams(Guid id, Vector2Int position, int level, Vector2Int size, BuildingType buildingType)
+        public BuildingParams(Guid id, Vector3Int position, int level, Vector3Int size, BuildingType buildingType)
         {
             Id = id;
             Position = position;

@@ -11,9 +11,11 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         public override void Install(IContainerBuilder builder)
         {
             builder.RegisterInstance<Transform>(transform);
-            builder.Register<BuildingPlacer>(Lifetime.Singleton).WithParameter(_buildingMoveOffset).AsSelf().AsImplementedInterfaces();
+            builder.Register<BuildingPlacer>(Lifetime.Singleton).WithParameter(_buildingMoveOffset).AsImplementedInterfaces();
             builder.Register<BuildingFSM>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.RegisterComponent<BuildingDataComponent>(GetComponent<BuildingDataComponent>());
+            builder.Register<BuildingActivePublisher>(Lifetime.Singleton).AsImplementedInterfaces();
+            
         }
         
     }

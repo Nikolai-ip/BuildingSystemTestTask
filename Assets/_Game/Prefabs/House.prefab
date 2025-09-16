@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3755241047455155016}
   - component: {fileID: 4917301890300512601}
   - component: {fileID: 8549437806791992444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 5246081098636360468}
   - component: {fileID: 4308866426590819417}
   - component: {fileID: 3115295610197267619}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 2321118930980346161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.71, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99f18c6eec54fff8bc7fe8037274a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.BuildingDataComponent
-  _size: {x: 3, y: 1}
+  _size: {x: 5, y: 4, z: 0}
   _type: 1
 --- !u!114 &4308866426590819417
 MonoBehaviour:
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad0b965af5042b99a4eaeb453a718b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Application::_Game.Scripts.Application.PlacementSystem.Building.BuildingInstaller
-  _buildingMoveOffset: {x: 0, y: 0.5, z: 0}
+  _buildingMoveOffset: {x: 0, y: 0.8, z: 0}
 --- !u!1 &3356988916724736592
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752204752703038629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 3356988916724736592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.521, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 1936008951306032914}
   - component: {fileID: 7279948559544960104}
   - component: {fileID: 635056846640386265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 7193123473337330291}
   - component: {fileID: 6143872317896051416}
   - component: {fileID: 3925263395029379788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1601383815889817249}
   - component: {fileID: 3873551502835612122}
   - component: {fileID: 9063430985389540969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

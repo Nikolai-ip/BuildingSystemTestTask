@@ -5,23 +5,23 @@ using VContainer.Unity;
 
 namespace _Game.Scripts.Application.Services.Economy
 {
-    public class BuildingEconomyService: IStartable
+    public class BuildingEconomyService: IInitializable
     {
         private readonly IBuildingContainer _buildingContainer;
         private readonly IncomeBuildingsParams _incomeBuildingsParams;
-        private TimeSpan _interval;
+        private readonly TimeSpan _interval;
         private readonly CurrencyHolder _currencyHolder;
         private readonly Stopwatch _stopwatch;
 
-        public BuildingEconomyService(IBuildingContainer buildingContainer, IncomeBuildingsParams incomeBuildingsParams, CurrencyHolder currencyHolder)
+        public BuildingEconomyService(IBuildingContainer buildingContainer, IncomeBuildingsParams incomeBuildingsParams, CurrencyHolder currencyHolder, TimeSpan interval)
         {
             _buildingContainer = buildingContainer;
             _incomeBuildingsParams = incomeBuildingsParams;
             _currencyHolder = currencyHolder;
+            _interval = interval;
             _stopwatch = new Stopwatch(_interval);
         }
-
-        public void Start()
+        public void Initialize()
         {
             _stopwatch.OnTick += CalculateIncome;
             _stopwatch.Start();
@@ -35,5 +35,7 @@ namespace _Game.Scripts.Application.Services.Economy
                     _currencyHolder.AddCoins(income);
             }    
         }
+
+
     }
 }

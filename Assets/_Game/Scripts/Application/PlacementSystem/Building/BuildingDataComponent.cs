@@ -9,22 +9,25 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
 {
     public class BuildingDataComponent: MonoBehaviour
     {
-        [SerializeField] private Vector2Int _size;
+        [SerializeField] private Vector3Int _size;
         [SerializeField] private BuildingType _type;
         private BuildingParams _buildingParams;
+
+        public BuildingParams BuildingParams => _buildingParams;
+
         private BuildingFSM _buildingFsm;
-        private BuildingPlacer _buildingPlacer;
+        private IBuildingPlacer _buildingPlacer;
         
-        public void Construct(BuildingFSM buildingFsm, BuildingPlacer buildingPlacer)
+        public void Construct(BuildingFSM buildingFsm, IBuildingPlacer buildingPlacer)
         {
             _buildingFsm = buildingFsm;
             _buildingPlacer = buildingPlacer;
         }
         public void Init(BuildingParams @params, BuildingState state)
         {
-            _buildingParams = new(@params.Id, Vector2Int.zero, @params.Level, _size, _type);
+            _buildingParams = new(@params.Id, Vector3Int.zero, @params.Level, _size, _type);
             _buildingFsm.State.Subscribe(OnStateChanged).AddTo(this);
-            _buildingFsm.Enable(state);
+            _buildingFsm.SetState(state);
         }
         
         private void OnStateChanged(BuildingState state)

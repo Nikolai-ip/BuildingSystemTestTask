@@ -19,9 +19,9 @@ namespace _Game.Scripts.Application.PlacementSystem
         {
             return _factory.Create(new BuildingParams(
                 Guid.NewGuid(),
-                Vector2Int.zero,
+                Vector3Int.zero,
                 0,
-                -Vector2Int.one,
+                -Vector3Int.one,
                 buildingType));
         }
     }

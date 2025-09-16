@@ -17,6 +17,7 @@ namespace _Game.Scripts.DI
             {
                 installer.Install(builder);
             }
+            
         }
 
         protected override LifetimeScope FindParent()

@@ -37,7 +37,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Factories
             var instance = _objectResolver.Instantiate(prefab);
             var scope = instance.GetComponent<LifetimeScope>();
             scope.Build();
-            instance.Construct(scope.Container.Resolve<BuildingFSM>(), scope.Container.Resolve<BuildingPlacer>());
+            instance.Construct(scope.Container.Resolve<BuildingFSM>(), scope.Container.Resolve<IBuildingPlacer>());
             instance.Init(@params, _initialState);
             return instance;
         }

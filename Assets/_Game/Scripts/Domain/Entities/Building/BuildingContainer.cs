@@ -7,7 +7,8 @@ namespace _Game.Scripts.Domain.Entities.Building
 {
     public class BuildingContainer: IBuildingContainer
     {
-        private List<BuildingParams> _buildings;
+        private readonly List<BuildingParams> _buildings = new();
+        
         public IEnumerator<BuildingParams> GetEnumerator()
         {
             return _buildings.GetEnumerator();
