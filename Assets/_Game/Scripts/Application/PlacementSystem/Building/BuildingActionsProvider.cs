@@ -1,12 +1,16 @@
+using _Game.Scripts.Application.PlacementSystem.Building.UpgradeFeature;
+
 namespace _Game.Scripts.Application.PlacementSystem.Building
 {
     public class BuildingActionsProvider : IBuildingActionsProvider
     {
-        private BuildingFSM _fsm;
+        private readonly BuildingFSM _fsm;
+        private readonly IBuildingUpgrader _buildingUpgrader;
 
-        public BuildingActionsProvider(BuildingFSM fsm)
+        public BuildingActionsProvider(BuildingFSM fsm, IBuildingUpgrader buildingUpgrader)
         {
             _fsm = fsm;
+            _buildingUpgrader = buildingUpgrader;
         }
 
         public void EditBuilding()
@@ -17,6 +21,11 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         public void DeleteBuilding()
         {
             _fsm.SetState(BuildingState.Remove);
+        }
+
+        public void UpgradeBuilding()
+        {
+            _buildingUpgrader.Upgrade();
         }
     }
 }

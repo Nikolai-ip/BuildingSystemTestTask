@@ -4,5 +4,6 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
     {
         void EditBuilding();
         void DeleteBuilding();
+        void UpgradeBuilding();
     }
 }

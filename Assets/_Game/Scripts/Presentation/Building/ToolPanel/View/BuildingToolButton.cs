@@ -17,6 +17,7 @@ namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
         {
             None,
             Edit,
+            LevelUp,
             Remove
         }
 

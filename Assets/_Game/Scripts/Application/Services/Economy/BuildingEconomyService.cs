@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.Application.Utilities;
 using _Game.Scripts.Domain.Entities.Building;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace _Game.Scripts.Application.Services.Economy
@@ -31,8 +32,12 @@ namespace _Game.Scripts.Application.Services.Economy
         {
             for (int i = 0; i < _buildingContainer.Count; i++)
             {
-                if (_incomeBuildingsParams.TryGetIncome(_buildingContainer[i].BuildingType, out int income))
+                var buildingParams = _buildingContainer[i];
+                if (_incomeBuildingsParams.TryGetIncome(buildingParams.BuildingType, buildingParams.Level, out int income))
+                {
+                    Debug.Log($"[BuildingEconomyService.CalculateIncome] add income {income} coins from {buildingParams.BuildingType} with level {buildingParams.Level}");
                     _currencyHolder.AddCoins(income);
+                }
             }    
         }
 

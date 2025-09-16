@@ -213,10 +213,11 @@ MonoBehaviour:
   _buildingLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  _view: {fileID: 1933453295301543918}
+  _view: {fileID: 1154043834245494265}
   _toolButtons:
-  - {fileID: 5013234837828842019}
-  - {fileID: 2777964579383516569}
+  - {fileID: 144494389445602064}
+  - {fileID: 5013531572548775075}
+  - {fileID: 8304561265687661142}
 --- !u!65 &1946659372939835863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -616,54 +617,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 996893263671117258}
     m_Modifications:
-    - target: {fileID: 640218170785039393, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1933453295301543918}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnCloseButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: _Game.Scripts.Presentation.Building.BuildingToolsPresenter.ToolPanelView,
-        Presentation
-      objectReference: {fileID: 0}
-    - target: {fileID: 2567858493870377532, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3689427177165202867, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3689427177165202867, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3689427177165202867, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3689427177165202867, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5793665347229701246, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_Pivot.x
@@ -691,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793665347229701246, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5793665347229701246, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_SizeDelta.y
@@ -749,107 +717,97 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7350517096520070787, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      propertyPath: m_Name
-      value: CloseButton
-      objectReference: {fileID: 0}
     - target: {fileID: 7924723766754387750, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355315096952344299, guid: 6032887425091324a91b5f2130b83821, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415966997150615164, guid: 6032887425091324a91b5f2130b83821, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415966997150615164, guid: 6032887425091324a91b5f2130b83821, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415966997150615164, guid: 6032887425091324a91b5f2130b83821, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415966997150615164, guid: 6032887425091324a91b5f2130b83821, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8624950987402352502, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8624950987402352502, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8624950987402352502, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8624950987402352502, guid: 6032887425091324a91b5f2130b83821, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5564592231083115196, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1933453295301543918}
-    - targetCorrespondingSourceObject: {fileID: 2697716650728572505, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5013234837828842019}
-    - targetCorrespondingSourceObject: {fileID: 4802871342120568296, guid: 6032887425091324a91b5f2130b83821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2777964579383516569}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6032887425091324a91b5f2130b83821, type: 3}
---- !u!1 &669009916770397644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7924723766754387750, guid: 6032887425091324a91b5f2130b83821, type: 3}
-  m_PrefabInstance: {fileID: 7256014502258117354}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2744293848332996354 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4802871342120568296, guid: 6032887425091324a91b5f2130b83821, type: 3}
-  m_PrefabInstance: {fileID: 7256014502258117354}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2777964579383516569
+--- !u!114 &144494389445602064 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7400489919755100666, guid: 6032887425091324a91b5f2130b83821, type: 3}
+  m_PrefabInstance: {fileID: 7256014502258117354}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2744293848332996354}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103a9847f3994001be06aaefc7a18807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation::_Game.Scripts.Presentation.Building.BuildingToolsPresenter.BuildingToolButton
-  _clickInterval: 0.3
-  _toolAction: 2
---- !u!1 &2993747615376869462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5564592231083115196, guid: 6032887425091324a91b5f2130b83821, type: 3}
+--- !u!114 &1154043834245494265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8408632264279408403, guid: 6032887425091324a91b5f2130b83821, type: 3}
   m_PrefabInstance: {fileID: 7256014502258117354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1933453295301543918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2993747615376869462}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6e9c5fa61ff42bb8fe9d24d8d2525a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation::_Game.Scripts.Presentation.Building.BuildingToolsPresenter.ToolPanelView
-  _toolPanel: {fileID: 669009916770397644}
 --- !u!224 &3807144021549145748 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5793665347229701246, guid: 6032887425091324a91b5f2130b83821, type: 3}
   m_PrefabInstance: {fileID: 7256014502258117354}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4738558384968092851 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2697716650728572505, guid: 6032887425091324a91b5f2130b83821, type: 3}
+--- !u!114 &5013531572548775075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2387240791049512521, guid: 6032887425091324a91b5f2130b83821, type: 3}
   m_PrefabInstance: {fileID: 7256014502258117354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5013234837828842019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4738558384968092851}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103a9847f3994001be06aaefc7a18807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Presentation::_Game.Scripts.Presentation.Building.BuildingToolsPresenter.BuildingToolButton
-  _clickInterval: 0.3
-  _toolAction: 1
+--- !u!114 &8304561265687661142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1697066262303441084, guid: 6032887425091324a91b5f2130b83821, type: 3}
+  m_PrefabInstance: {fileID: 7256014502258117354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103a9847f3994001be06aaefc7a18807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Presentation::_Game.Scripts.Presentation.Building.BuildingToolsPresenter.BuildingToolButton

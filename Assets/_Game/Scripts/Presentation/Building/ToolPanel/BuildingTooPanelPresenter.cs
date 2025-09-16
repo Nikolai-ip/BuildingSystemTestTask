@@ -21,6 +21,7 @@ namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
 
         public void Initialize()
         {
+            _toolPanelView.Hide();
             _pointerClickInvoker.PointerClickedOnBuilding += ShowUI;
             _toolPanelViewCallBack.callback += HandleViewCallback;
         }
@@ -40,6 +41,9 @@ namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
                         break;
                     case BuildingToolCallback.ToolAction.Remove:
                         _buildingActionsProvider.DeleteBuilding();
+                        break;
+                    case BuildingToolCallback.ToolAction.LevelUp:
+                        _buildingActionsProvider.UpgradeBuilding();
                         break;
                 }
             }

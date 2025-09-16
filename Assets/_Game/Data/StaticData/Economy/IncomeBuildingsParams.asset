@@ -15,4 +15,5 @@ MonoBehaviour:
   _buildingIncomeInspectorMap:
     _dictionary:
     - _key: 1
-      _value: 1
+      _value:
+        _levelIncomeData: 01000000020000000300000004000000
