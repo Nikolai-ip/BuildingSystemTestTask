@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using _Game.Scripts.Domain.Entities.Building;
 using UnityEngine;
 
-namespace _Game.Scripts.Presentation.PlacementSystem.View
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI.View
 {
     public class BuildingsShopView: MonoBehaviour, IView<BuildingsShopViewData>, IViewInteractable<BuildingPurchasedCallback>
     {

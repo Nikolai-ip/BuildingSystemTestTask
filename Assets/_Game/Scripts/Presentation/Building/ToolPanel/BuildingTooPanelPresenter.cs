@@ -1,8 +1,9 @@
 using System;
 using _Game.Scripts.Application.PlacementSystem.Building;
+using _Game.Scripts.Presentation.Building.ToolPanel.View;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
+namespace _Game.Scripts.Presentation.Building.ToolPanel
 {
     public class BuildingTooPanelPresenter: IInitializable, IDisposable
     {

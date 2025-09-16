@@ -1,9 +1,10 @@
 using System;
+using _Game.Scripts.Application.PlacementSystem.Building.StateMachine;
 using MessagePipe;
-using VContainer.Unity;
 using UniRx;
+using VContainer.Unity;
 
-namespace _Game.Scripts.Application.PlacementSystem.Building
+namespace _Game.Scripts.Application.PlacementSystem.Building.Messages
 {
     public class BuildingActivePublisher: IInitializable, IDisposable
     {

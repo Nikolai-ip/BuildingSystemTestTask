@@ -8,6 +8,10 @@ using VContainer.Unity;
 
 namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
 {
+    /// <summary>
+    /// Restores saved building instances from persistent storage during initialization.
+    /// Uses a dedicated restoration factory to recreate each building from saved parameters.
+    /// </summary>
     public class SavedBuildingsRestorer: IInitializable
     {
         private readonly BuildingSaveLoadDataStorage _dataStorage;

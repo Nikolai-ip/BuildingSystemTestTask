@@ -1,6 +1,6 @@
 using _Game.Scripts.Domain.Entities.Building;
 
-namespace _Game.Scripts.Application.PlacementSystem.Building
+namespace _Game.Scripts.Application.PlacementSystem.Building.Messages
 {
     public struct BuildingPlacedMessage
     {

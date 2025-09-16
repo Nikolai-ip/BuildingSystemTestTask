@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
+namespace _Game.Scripts.Presentation.Building.ToolPanel.View
 {
     public class ToolPanelView: MonoBehaviour, IViewEnableable<ToolPanelViewData>, IViewInteractable<ToolPanelViewCallBack>
     {

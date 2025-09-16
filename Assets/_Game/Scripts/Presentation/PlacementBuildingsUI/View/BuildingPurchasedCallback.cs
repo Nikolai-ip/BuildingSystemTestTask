@@ -1,6 +1,6 @@
 using _Game.Scripts.Domain.Entities.Building;
 
-namespace _Game.Scripts.Presentation.PlacementSystem.View
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI.View
 {
     public struct BuildingPurchasedCallback
     {

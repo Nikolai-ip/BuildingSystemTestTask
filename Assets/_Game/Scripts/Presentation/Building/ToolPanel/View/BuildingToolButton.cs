@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Game.Scripts.Presentation.Building.BuildingToolsPresenter
+namespace _Game.Scripts.Presentation.Building.ToolPanel.View
 {
     public class BuildingToolButton: ButtonView<BuildingToolCallback>
     {

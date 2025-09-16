@@ -4,7 +4,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _Game.Scripts.Presentation.PlacementSystem.View
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI.View
 {
     public class BuyBuildingButton: MonoBehaviour, IView<ButtonViewData>, IViewInteractable<BuildingPurchasedCallback>
     {

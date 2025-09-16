@@ -1,7 +1,6 @@
-using _Game.Scripts.Application.Utilities.Input;
 using UnityEngine;
 
-namespace _Game.Scripts.Application.PlacementSystem
+namespace _Game.Scripts.Application.Utilities.Input
 {
     public class GridPointerPosition
     {

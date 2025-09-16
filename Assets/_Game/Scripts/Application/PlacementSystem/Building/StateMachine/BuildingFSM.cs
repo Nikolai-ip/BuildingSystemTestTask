@@ -1,9 +1,10 @@
 using System;
+using _Game.Scripts.Application.PlacementSystem.Building.PlaceFeature;
 using UniRx;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Application.PlacementSystem.Building
+namespace _Game.Scripts.Application.PlacementSystem.Building.StateMachine
 {
     public class BuildingFSM: IInitializable, IDisposable
     {

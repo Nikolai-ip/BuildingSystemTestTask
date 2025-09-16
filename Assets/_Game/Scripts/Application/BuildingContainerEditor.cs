@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Game.Scripts.Application.PlacementSystem.Building;
+using _Game.Scripts.Application.PlacementSystem.Building.Messages;
 using _Game.Scripts.Domain.Entities.Building;
 using MessagePipe;
 using VContainer.Unity;

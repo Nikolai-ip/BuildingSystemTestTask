@@ -1,8 +1,8 @@
-using _Game.Scripts.Application.PlacementSystem;
+using _Game.Scripts.Application.Utilities.Input;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Presentation.PlacementSystem
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI
 {
     public class IndicatorMover: ITickable
     {

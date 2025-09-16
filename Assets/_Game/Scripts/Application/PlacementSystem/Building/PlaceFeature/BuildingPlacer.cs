@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using _Game.Scripts.Application.Utilities.Input;
 using _Game.Scripts.Domain.Entities;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure.Input;
@@ -7,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 
-namespace _Game.Scripts.Application.PlacementSystem.Building
+namespace _Game.Scripts.Application.PlacementSystem.Building.PlaceFeature
 {
     public class BuildingPlacer: IDisposable, IBuildingPlacer, IBuildingRemover
     {

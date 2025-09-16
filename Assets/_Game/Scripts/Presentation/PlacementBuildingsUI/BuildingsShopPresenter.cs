@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using _Game.Scripts.Application;
-using _Game.Scripts.Application.PlacementSystem;
+using _Game.Scripts.Application.PlacementSystem.Factories;
 using _Game.Scripts.Application.Services.Economy;
 using _Game.Scripts.Domain.Entities.Building;
-using _Game.Scripts.Presentation.PlacementSystem.View;
-using VContainer.Unity;
+using _Game.Scripts.Presentation.PlacementBuildingsUI.View;
 using UniRx;
+using VContainer.Unity;
 
-namespace _Game.Scripts.Presentation.PlacementSystem
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI
 {
     public class BuildingsShopPresenter: IInitializable, IDisposable
     {

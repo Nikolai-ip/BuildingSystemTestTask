@@ -3,7 +3,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace _Game.Scripts.Presentation.PlacementSystem.Installers
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI.Installers
 {
     public class PlacementSystemInstaller: IInstallerMono
     {

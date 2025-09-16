@@ -1,4 +1,4 @@
-namespace _Game.Scripts.Presentation.PlacementSystem
+namespace _Game.Scripts.Presentation
 {
     public class ButtonViewData
     {

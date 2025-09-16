@@ -3,9 +3,9 @@ using _Game.Scripts.Application.Utilities.Input;
 using _Game.Scripts.Data.StaticData;
 using _Game.Scripts.DI;
 using _Game.Scripts.Presentation.Building.BuildingPlacePresentation;
-using _Game.Scripts.Presentation.Building.BuildingToolsPresenter;
+using _Game.Scripts.Presentation.Building.ToolPanel;
+using _Game.Scripts.Presentation.Building.ToolPanel.View;
 using _Game.Scripts.Presentation.Building.UpgradeButton;
-using _Game.Scripts.Presentation.PlacementSystem;
 using UnityEngine;
 using VContainer;
 

@@ -5,6 +5,10 @@ using VContainer.Unity;
 
 namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
 {
+    /// <summary>
+    /// Observes changes in the building container and updates the building save/load storage accordingly.
+    /// Does not handle full game saving, only synchronizes the current list of buildings with the data storage.
+    /// </summary>
     public class BuildingsSaver: IInitializable, IDisposable
     {
         private readonly IBuildingContainer _buildingContainer;

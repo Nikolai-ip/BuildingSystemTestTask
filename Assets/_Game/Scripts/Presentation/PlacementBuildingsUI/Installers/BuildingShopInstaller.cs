@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using _Game.Scripts.Application;
 using _Game.Scripts.Data.StaticData;
 using _Game.Scripts.DI;
-using _Game.Scripts.Presentation.PlacementSystem.View;
+using _Game.Scripts.Presentation.PlacementBuildingsUI.View;
 using UnityEngine;
 using VContainer;
 
-namespace _Game.Scripts.Presentation.PlacementSystem.Installers
+namespace _Game.Scripts.Presentation.PlacementBuildingsUI.Installers
 {
     public class BuildingShopInstaller: IInstallerMono
     {

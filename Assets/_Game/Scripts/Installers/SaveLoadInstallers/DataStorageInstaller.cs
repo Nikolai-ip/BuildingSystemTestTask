@@ -26,7 +26,6 @@ namespace _Game.Scripts.Installers.SaveLoadInstallers
                     .RegisterInstance(dataStorage.Value, dataStorage.Key);
             }
             var gameDataStorage = new GameDataStorage(saveLoadSystem, dataStorages);
-
         }
     }
 }

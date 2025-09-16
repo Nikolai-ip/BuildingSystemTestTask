@@ -1,3 +1,6 @@
+using _Game.Scripts.Application.PlacementSystem.Building.Messages;
+using _Game.Scripts.Application.PlacementSystem.Building.PlaceFeature;
+using _Game.Scripts.Application.PlacementSystem.Building.StateMachine;
 using _Game.Scripts.Application.PlacementSystem.Building.UpgradeFeature;
 using _Game.Scripts.DI;
 using UnityEngine;
