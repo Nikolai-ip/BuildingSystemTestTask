@@ -16,7 +16,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             builder.RegisterComponent<BuildingDataComponent>(GetComponent<BuildingDataComponent>());
             builder.Register<BuildingActivePublisher>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.Register<BuildingActionsProvider>(Lifetime.Singleton).AsImplementedInterfaces();
-            builder.Register<BuildingRemover>(Lifetime.Singleton).AsImplementedInterfaces().WithParameter(gameObject);
+            builder.Register<BuildingObjectRemover>(Lifetime.Singleton).AsImplementedInterfaces().WithParameter(gameObject);
         }
         
     }

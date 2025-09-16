@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.Domain.Entities
 {
-    public class GridData : IGridObjectAdder, IGridObjectValidator
+    public class GridData : IGridObjectAdder, IGridObjectValidator, IGridObjectRemover
     {
         private readonly Dictionary<Vector3Int, PlacementData> _placementObjects = new();
 
@@ -20,6 +20,16 @@ namespace _Game.Scripts.Domain.Entities
                 }
                 _placementObjects[pos] = data;
             }
+        }
+
+        public void RemoveObjectAt(Vector3Int gridPosition, Vector3Int objectSize)
+        {
+            List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectSize);
+            foreach (var pos in positionToOccupy)
+            {
+                _placementObjects.Remove(pos);
+            }
+
         }
 
         private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector3Int objectSize)

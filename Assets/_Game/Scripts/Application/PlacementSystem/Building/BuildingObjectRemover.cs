@@ -6,16 +6,18 @@ using Object = UnityEngine.Object;
 
 namespace _Game.Scripts.Application.PlacementSystem.Building
 {
-    public class BuildingRemover: IInitializable, IDisposable
+    public class BuildingObjectRemover: IInitializable, IDisposable
     {
-        private BuildingFSM _fsm;
+        private readonly BuildingFSM _fsm;
+        private readonly GameObject _buildingGameObject;
+        private readonly IBuildingRemover _buildingRemover;
         private IDisposable _sub;
-        private GameObject _buildingGameObject;
 
-        public BuildingRemover(BuildingFSM fsm, GameObject buildingGameObject)
+        public BuildingObjectRemover(BuildingFSM fsm, GameObject buildingGameObject, IBuildingRemover buildingRemover)
         {
             _fsm = fsm;
             _buildingGameObject = buildingGameObject;
+            _buildingRemover = buildingRemover;
         }
 
         public void Initialize()
@@ -27,6 +29,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         {
             if (state == BuildingState.Remove)
             {
+                _buildingRemover.RemoveObject();
                 Object.Destroy(_buildingGameObject);
             }
         }

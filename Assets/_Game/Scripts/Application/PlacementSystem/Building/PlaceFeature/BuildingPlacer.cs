@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.Application.PlacementSystem.Building
 {
-    public class BuildingPlacer: IDisposable, IBuildingPlacer
+    public class BuildingPlacer: IDisposable, IBuildingPlacer, IBuildingRemover
     {
         private readonly Transform _buildingTr;
         private readonly BuildingDataComponent _buildingDataComponent;
@@ -17,6 +17,8 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         private readonly IInputService _inputService;
         private readonly IGridObjectAdder _gridObjectAdder;
         private readonly IGridObjectValidator _gridObjectValidator;
+        private readonly IGridObjectRemover _gridObjectRemover;
+
         private readonly Vector3 _offset;
         private CancellationTokenSource _cts;
         public event Action<Vector3Int> OnBuildingPlaced;
@@ -24,7 +26,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
         public ReactiveProperty<bool> CanBePlaced { get; }
         private BuildingParams _buildingParams;
 
-        public BuildingPlacer(Transform buildingTr, BuildingDataComponent buildingDataComponent, GridPointerPosition pointerPosition, IInputService inputService, Vector3 offset, IGridObjectAdder gridObjectAdder, IGridObjectValidator gridObjectValidator)
+        public BuildingPlacer(Transform buildingTr, BuildingDataComponent buildingDataComponent, GridPointerPosition pointerPosition, IInputService inputService, Vector3 offset, IGridObjectAdder gridObjectAdder, IGridObjectValidator gridObjectValidator, IGridObjectRemover gridObjectRemover)
         {
             _buildingTr = buildingTr;
             _pointerPosition = pointerPosition;
@@ -32,6 +34,7 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             _offset = offset;
             _gridObjectAdder = gridObjectAdder;
             _gridObjectValidator = gridObjectValidator;
+            _gridObjectRemover = gridObjectRemover;
             _buildingDataComponent = buildingDataComponent;
             CanBePlaced = new();
         }
@@ -50,8 +53,8 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             {
                 while(_cts != null && !_cts.Token.IsCancellationRequested)
                 {
-                    Vector3 position = _pointerPosition.GetPosition() + _offset;
-                    _buildingTr.position = position;
+                    Vector3 position = _pointerPosition.GetPosition();
+                    _buildingTr.position = position + _offset;
                     BuildingPos = _pointerPosition.PointerPosToCell();
                     CanBePlaced.Value = _gridObjectValidator.CanPlaceObjectAt(BuildingPos, _buildingParams.Size);
                     await UniTask.Yield();
@@ -75,6 +78,11 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
             _inputService.OnLeftMouseButtonClicked -= TryStopPlace;
             DisposeCts();
             OnBuildingPlaced?.Invoke(BuildingPos);
+        }
+
+        public void RemoveObject()
+        {
+            _gridObjectRemover.RemoveObjectAt(BuildingPos, _buildingParams.Size);
         }
 
         public void Dispose()
