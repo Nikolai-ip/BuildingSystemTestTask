@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using _Game.Scripts.Application.Services.SaveLoadService;
-using _Game.Scripts.Application.Services.SaveLoadService.SaveLoadObjects;
 using _Game.Scripts.Domain.Entities.Building;
 
 namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
@@ -9,10 +8,10 @@ namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
     {
         public List<BuildingParams> GetSavedBuildingsParams => GetSavedData<List<BuildingParams>>();
         
-        public BuildingSaveLoadDataStorage(SaveLoadData saveLoadData) : base(saveLoadData)
+        public BuildingSaveLoadDataStorage(Application.Services.SaveLoadService.SaveLoadObjects.SaveLoadData saveLoadData) : base(saveLoadData)
         {
         }
-        public override void RestoreValues(SaveLoadData saveLoadData)
+        public override void RestoreValues(Application.Services.SaveLoadService.SaveLoadObjects.SaveLoadData saveLoadData)
         {
             RestoreValue<List<BuildingParams>>(saveLoadData);
         }

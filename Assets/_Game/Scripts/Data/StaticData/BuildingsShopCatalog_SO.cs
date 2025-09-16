@@ -1,4 +1,5 @@
 using _Game.Scripts.Application;
+using _Game.Scripts.Data.GameData;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Tools;
 using UnityEngine;

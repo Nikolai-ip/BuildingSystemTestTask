@@ -1,7 +1,6 @@
 using System;
 using _Game.Scripts.Application.Utilities;
 using _Game.Scripts.Domain.Entities.Building;
-using UnityEngine;
 using VContainer.Unity;
 
 namespace _Game.Scripts.Application.Services.Economy

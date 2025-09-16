@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Game.Scripts.Application;
 using _Game.Scripts.Application.PlacementSystem.Factories;
 using _Game.Scripts.Application.Services.Economy;
+using _Game.Scripts.Data.GameData;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Presentation.PlacementBuildingsUI.View;
 using UniRx;

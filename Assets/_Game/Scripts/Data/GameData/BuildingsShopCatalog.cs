@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using _Game.Scripts.Domain.Entities.Building;
 
-namespace _Game.Scripts.Application
+namespace _Game.Scripts.Data.GameData
 {
     public class BuildingsShopCatalog
     {

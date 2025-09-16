@@ -31,7 +31,7 @@ namespace _Game.Scripts.Installers
 
             builder.Register<BuildingContainer>(Lifetime.Singleton).As<IBuildingContainer>();
             builder.Register<BuildingRuntimeSpawner>(Lifetime.Singleton).AsImplementedInterfaces();
-            builder.Register<BuildingContainerEditor>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<BuildingContainerUpdater>(Lifetime.Singleton).AsImplementedInterfaces();
             
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Game.Scripts.Application;
+using _Game.Scripts.Data.GameData;
 using _Game.Scripts.Data.StaticData;
 using _Game.Scripts.DI;
 using _Game.Scripts.Presentation.PlacementBuildingsUI.View;

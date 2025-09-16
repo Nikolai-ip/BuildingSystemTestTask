@@ -2,7 +2,6 @@ using _Game.Scripts.Application.PlacementSystem.Building;
 using _Game.Scripts.Application.PlacementSystem.Factories;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 

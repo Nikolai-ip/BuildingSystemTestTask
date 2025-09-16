@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using _Game.Scripts.Application.PlacementSystem.Building;
 using _Game.Scripts.Application.PlacementSystem.Building.PlaceFeature;
 using _Game.Scripts.Application.PlacementSystem.Building.StateMachine;
-using _Game.Scripts.Domain.Entities;
 using _Game.Scripts.Domain.Entities.Building;
 using _Game.Scripts.Infrastructure;
 using VContainer;

@@ -3,6 +3,7 @@ using _Game.Scripts.Application;
 using _Game.Scripts.Application.PlacementSystem.Building;
 using _Game.Scripts.Application.PlacementSystem.Building.UpgradeFeature;
 using _Game.Scripts.Application.Services.Economy;
+using _Game.Scripts.Data.GameData;
 using _Game.Scripts.Presentation.Building.ToolPanel.View;
 using VContainer.Unity;
 using UniRx;

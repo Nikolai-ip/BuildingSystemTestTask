@@ -1,4 +1,3 @@
-using System;
 using UniRx;
 
 namespace _Game.Scripts.Application.Services.Economy

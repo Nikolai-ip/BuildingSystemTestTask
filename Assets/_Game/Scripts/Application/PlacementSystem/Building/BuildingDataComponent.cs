@@ -1,10 +1,7 @@
-using System;
 using _Game.Scripts.Application.PlacementSystem.Building.PlaceFeature;
 using _Game.Scripts.Application.PlacementSystem.Building.StateMachine;
 using _Game.Scripts.Domain.Entities.Building;
 using UnityEngine;
-using VContainer;
-using VContainer.Unity;
 using UniRx;
 
 namespace _Game.Scripts.Application.PlacementSystem.Building
