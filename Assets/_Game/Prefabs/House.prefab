@@ -218,6 +218,8 @@ MonoBehaviour:
   - {fileID: 144494389445602064}
   - {fileID: 5013531572548775075}
   - {fileID: 8304561265687661142}
+  _upgradeButton: {fileID: 5013531572548775075}
+  _buildingUpgradeCostDataSo: {fileID: 11400000, guid: ddb18cccd8cc97948bb68031bd270c51, type: 2}
 --- !u!65 &1946659372939835863
 BoxCollider:
   m_ObjectHideFlags: 0

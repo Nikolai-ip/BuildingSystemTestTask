@@ -33,7 +33,7 @@ namespace _Game.Scripts.Application.Services.Economy
         public bool TrtGetIncomeByLevel(int level, out int income)
         {
             income = 0;
-            if (level > _levelIncomeData.Count) 
+            if (level >= _levelIncomeData.Count) 
                 return false;
             income =  _levelIncomeData[level];
             return true;
