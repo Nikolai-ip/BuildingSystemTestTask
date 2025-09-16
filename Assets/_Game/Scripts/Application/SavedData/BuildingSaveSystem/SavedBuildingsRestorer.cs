@@ -21,7 +21,7 @@ namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
 
         public void Initialize()
         {
-            foreach (var savedBuildingsParam in _dataStorage.GetSavedBuildingsParams)
+            foreach (var savedBuildingsParam in _dataStorage.CopyData())
             {
                 _buildingFactory.Create(savedBuildingsParam);
             }

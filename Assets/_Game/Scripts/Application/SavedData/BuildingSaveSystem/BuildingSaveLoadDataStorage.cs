@@ -22,5 +22,15 @@ namespace _Game.Scripts.Application.SavedData.BuildingSaveSystem
             GetSavedBuildingsParams.Clear();
             GetSavedBuildingsParams.AddRange(buildings);
         }
+
+        public List<BuildingParams> CopyData()
+        {
+            var copiedData = new  List<BuildingParams>();
+            foreach (var buildingParam in GetSavedBuildingsParams)
+                copiedData.Add(buildingParam);
+            
+
+            return copiedData;
+        }
     }
 }
