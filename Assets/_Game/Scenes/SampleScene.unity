@@ -1781,6 +1781,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7351311925574122556, guid: 6c0f73f86b275ef4fbd1c233d1b7e19e, type: 3}
+      propertyPath: m_text
+      value: Fabric
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155289259420774547, guid: 6c0f73f86b275ef4fbd1c233d1b7e19e, type: 3}
+      propertyPath: _buildingType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8902153337328420179, guid: 6c0f73f86b275ef4fbd1c233d1b7e19e, type: 3}
       propertyPath: m_Name
       value: BuyBuildingButton (1)

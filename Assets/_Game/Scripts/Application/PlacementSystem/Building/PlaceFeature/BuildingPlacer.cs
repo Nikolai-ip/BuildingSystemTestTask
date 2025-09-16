@@ -90,7 +90,8 @@ namespace _Game.Scripts.Application.PlacementSystem.Building
 
         public void RemoveObject()
         {
-            _gridObjectRemover.RemoveObjectAt(BuildingPos, _buildingParams.Size);
+            var buildingParams = _buildingDataComponent.BuildingParams;
+            _gridObjectRemover.RemoveObjectAt(BuildingPos, buildingParams.Size);
         }
 
         public void Dispose()

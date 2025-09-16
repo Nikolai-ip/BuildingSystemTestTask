@@ -16,3 +16,5 @@ MonoBehaviour:
     _dictionary:
     - _key: 1
       _value: 10
+    - _key: 2
+      _value: 30

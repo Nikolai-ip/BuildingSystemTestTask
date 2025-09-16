@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Game.Scripts.Application.Utilities.Input;
 using _Game.Scripts.Data.StaticData;
 using _Game.Scripts.DI;
+using _Game.Scripts.Presentation.Building.BuildingPlacePresentation;
 using _Game.Scripts.Presentation.Building.BuildingToolsPresenter;
 using _Game.Scripts.Presentation.Building.UpgradeButton;
 using _Game.Scripts.Presentation.PlacementSystem;
@@ -18,6 +19,7 @@ namespace _Game.Scripts.Presentation.Building
         [SerializeField] private List<ButtonView<BuildingToolCallback>> _toolButtons;
         [SerializeField] private ButtonView<BuildingToolCallback> _upgradeButton;
         [SerializeField] private BuildingUpgradeCostData_SO _buildingUpgradeCostDataSo;
+        [SerializeField] private BuildingModelToggler _modelTogglerView;
         public override void Install(IContainerBuilder builder)
         {
             builder
@@ -44,6 +46,13 @@ namespace _Game.Scripts.Presentation.Building
             builder
                 .Register<UpgradeButtonPresenter>(Lifetime.Singleton)
                 .AsImplementedInterfaces().WithParameter(_buildingUpgradeCostDataSo.GetUpgradeCostData());
+
+            builder
+                .RegisterInstance(_modelTogglerView)
+                .As<IView<BuildingModelTogglerData>>();
+            builder
+                .Register<BuildingPlacementValidPresenter>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
         }
     }
 }

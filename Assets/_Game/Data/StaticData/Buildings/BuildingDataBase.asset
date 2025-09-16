@@ -16,3 +16,5 @@ MonoBehaviour:
     _dictionary:
     - _key: 1
       _value: {fileID: 5246081098636360468, guid: 531b5c5453857384089432e60d5bafcb, type: 3}
+    - _key: 2
+      _value: {fileID: 5246081098636360468, guid: 8e96619eaa6589842a8f10e601ce1348, type: 3}

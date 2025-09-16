@@ -17,3 +17,6 @@ MonoBehaviour:
     - _key: 1
       _value:
         _levelIncomeData: 01000000020000000300000004000000
+    - _key: 2
+      _value:
+        _levelIncomeData: 03000000040000000500000006000000
