@@ -1,0 +1,24 @@
+{
+    "name": "DIInstallers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:904d7644b91445bdac8a4527219b8e3e",
+        "GUID:ad0c0233f8a449b4bc03f14c84eb0bb8",
+        "GUID:eb3b9234322928b4e9040b63f569e5b8",
+        "GUID:ce1b1844f46706e4abc417809109022b",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+        "GUID:4f682e06dbb3e624faedad9cc27106cc",
+        "GUID:08e15c4b299bbb94592ec0f44af8b578",
+        "GUID:2e1e5048aba44b2b8e584750a47ebca7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
